@@ -20,18 +20,6 @@
         app:layout_constraintVertical_bias="0.426" />
 
     <Button
-        android:id="@+id/btnProtein"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Protein"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHelp"
-        app:layout_constraintVertical_bias="0.017" />
-
-    <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,15 +54,14 @@
         app:layout_constraintVertical_bias="0.014" />
 
     <Button
-        android:id="@+id/btnTable"
+        android:id="@+id/btnTugas2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Table"
+        android:text="Tugas 2 : Tracker Layout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnProtein"
+        app:layout_constraintTop_toBottomOf="@+id/btnHelp"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

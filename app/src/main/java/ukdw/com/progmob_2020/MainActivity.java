@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button myBtn = (Button)findViewById(R.id.button1);
         final EditText myEditText = (EditText)findViewById(R.id.editText1);
         Button btnHelp = (Button)findViewById(R.id.btnHelp);
-        Button btnProtein = (Button)findViewById(R.id.btnProtein);
-        Button btnTable = (Button)findViewById(R.id.btnTable);
+        Button btnTugas2 = (Button)findViewById(R.id.btnTugas2);
 
         //action
         txtView.setText(R.string.text_hello_world);
@@ -49,20 +48,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnProtein.setOnClickListener(new View.OnClickListener() {
+        btnTugas2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ProteinActivity.class);
+                Intent intent = new Intent(MainActivity.this,TrackerActivity.class);
                 startActivity(intent);
             }
         });
 
-        btnTable.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,TableActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
