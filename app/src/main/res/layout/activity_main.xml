@@ -75,13 +75,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btnTugas2" />
 
     <Button
-        android:id="@+id/btnRecylerView"
+        android:id="@+id/btnRecyclerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
-        android:text="Recyler"
+        android:text="Recycler"
         app:layout_constraintEnd_toStartOf="@+id/btnCardView"
         app:layout_constraintStart_toEndOf="@+id/btnListView"
         app:layout_constraintTop_toBottomOf="@+id/btnTugas2" />

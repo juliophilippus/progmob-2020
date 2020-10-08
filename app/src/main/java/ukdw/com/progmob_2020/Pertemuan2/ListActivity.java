@@ -25,7 +25,7 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         //variabel
-        ListView lv = (ListView)findViewById(R.id.LvLatihan);
+        ListView lv = (ListView)findViewById(R.id.lvLatihan);
         Spinner sp = (Spinner)findViewById(R.id.spinnerLatihan);
 
         //action

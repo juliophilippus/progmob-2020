@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import ukdw.com.progmob_2020.Pertemuan2.ListActivity;
+import ukdw.com.progmob_2020.Pertemuan2.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         //pertemuan2
         Button btnList = (Button)findViewById(R.id.btnListView);
-        Button btnRecyler = (Button)findViewById(R.id.btnRecylerView);
+        Button btnRecycler = (Button)findViewById(R.id.btnRecyclerView);
         Button btnCard = (Button)findViewById(R.id.btnCardView);
 
         //action
@@ -67,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,ListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnRecycler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
                 startActivity(intent);
             }
         });
