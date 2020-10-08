@@ -15,11 +15,11 @@ import java.util.List;
 import ukdw.com.progmob_2020.Model.Mahasiswa;
 import ukdw.com.progmob_2020.R;
 
-public class MahasiswaRecyclerAdapter extends RecyclerView.Adapter<MahasiswaRecyclerAdapter.ViewHolder> {
+public class MahasiswaCardAdapter extends RecyclerView.Adapter<MahasiswaCardAdapter.ViewHolder> {
     private Context context;
     private List<Mahasiswa> mahasiswaList;
 
-    public MahasiswaRecyclerAdapter(Context context) {
+    public MahasiswaCardAdapter(Context context) {
         this.context = context;
         mahasiswaList = new ArrayList<>();
     }
@@ -36,7 +36,7 @@ public class MahasiswaRecyclerAdapter extends RecyclerView.Adapter<MahasiswaRecy
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item_list_recycler, parent, false);
+        View v = LayoutInflater.from(context).inflate(R.layout.item_list_cardview, parent, false);
         return new ViewHolder(v);
     }
 

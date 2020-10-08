@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import ukdw.com.progmob_2020.Pertemuan2.CardViewTestActivity;
 import ukdw.com.progmob_2020.Pertemuan2.ListActivity;
 import ukdw.com.progmob_2020.Pertemuan2.RecyclerActivity;
 
@@ -74,9 +75,18 @@ public class MainActivity extends AppCompatActivity {
         btnRecycler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                Intent intent = new Intent(MainActivity.this,RecyclerActivity.class);
                 startActivity(intent);
             }
         });
+
+        btnCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,CardViewTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
