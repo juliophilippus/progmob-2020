@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import ukdw.com.progmob_2020.Pertemuan2.ListActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         final EditText myEditText = (EditText)findViewById(R.id.editText1);
         Button btnHelp = (Button)findViewById(R.id.btnHelp);
         Button btnTugas2 = (Button)findViewById(R.id.btnTugas2);
+
+        //pertemuan2
+        Button btnList = (Button)findViewById(R.id.btnListView);
+        Button btnRecyler = (Button)findViewById(R.id.btnRecylerView);
+        Button btnCard = (Button)findViewById(R.id.btnCardView);
 
         //action
         txtView.setText(R.string.text_hello_world);
@@ -56,5 +63,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ListActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

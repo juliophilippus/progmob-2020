@@ -64,4 +64,36 @@
         app:layout_constraintTop_toBottomOf="@+id/btnHelp"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/btnListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
+        android:text="List"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTugas2" />
+
+    <Button
+        android:id="@+id/btnRecylerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="Recyler"
+        app:layout_constraintEnd_toStartOf="@+id/btnCardView"
+        app:layout_constraintStart_toEndOf="@+id/btnListView"
+        app:layout_constraintTop_toBottomOf="@+id/btnTugas2" />
+
+    <Button
+        android:id="@+id/btnCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTugas2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
