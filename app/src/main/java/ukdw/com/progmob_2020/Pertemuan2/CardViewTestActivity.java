@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ukdw.com.progmob_2020.Adapter.MahasiswaCardAdapter;
-import ukdw.com.progmob_2020.Adapter.MahasiswaRecyclerAdapter;
 import ukdw.com.progmob_2020.Model.Mahasiswa;
 import ukdw.com.progmob_2020.R;
 
@@ -22,7 +21,7 @@ public class CardViewTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_card_view_test);
 
         //variabel
-        RecyclerView rv = (RecyclerView)findViewById(R.id.rvCardView);
+        RecyclerView rv = (RecyclerView)findViewById(R.id.rvLatihan);
         MahasiswaCardAdapter mahasiswaCardAdapter;
 
         //data dummy

@@ -7,7 +7,7 @@
     tools:context=".Pertemuan2.RecyclerActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCardView"
+        android:id="@+id/rvLatihan"
         android:layout_width="372dp"
         android:layout_height="649dp"
         app:layout_constraintBottom_toBottomOf="parent"

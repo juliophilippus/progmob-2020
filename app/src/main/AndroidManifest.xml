@@ -12,6 +12,7 @@
         <activity android:name=".Pertemuan2.CardViewTestActivity"></activity>
         <activity android:name=".Pertemuan2.RecyclerActivity" />
         <activity android:name=".Pertemuan2.ListActivity" />
+        <activity android:name=".Pertemuan4.DebuggingActivity" />
         <activity android:name=".TrackerActivity" />
         <activity android:name=".HelpActivity" />
         <activity android:name=".MainActivity">

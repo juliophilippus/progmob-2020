@@ -21,7 +21,7 @@ public class RecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
 
         //variabel
-        RecyclerView rv = (RecyclerView)findViewById(R.id.rvCardView);
+        RecyclerView rv = (RecyclerView)findViewById(R.id.rvLatihan);
         MahasiswaRecyclerAdapter mahasiswaRecyclerAdapter;
 
         //data dummy
