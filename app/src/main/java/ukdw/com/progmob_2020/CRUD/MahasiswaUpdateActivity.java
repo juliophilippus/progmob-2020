@@ -3,6 +3,7 @@ package ukdw.com.progmob_2020.CRUD;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,59 +31,48 @@ public class MahasiswaUpdateActivity extends AppCompatActivity {
             final EditText edNim = (EditText)findViewById(R.id.edUpNim);
             final EditText edAlamat = (EditText)findViewById(R.id.edUpAlamat);
             final EditText edEmail = (EditText)findViewById(R.id.edUpEmail);
-            Button btnUp = (Button) findViewById(R.id.btnUpdate);
+            Button btnEdit = (Button) findViewById(R.id.btnUpdate);
             pd = new ProgressDialog(MahasiswaUpdateActivity.this);
 
-            btnUp.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    pd.setTitle("Mohon menunggu");
-                    pd.show();
+        Intent data = getIntent();
+        if(data.getExtras() != null){
+            edNama.setText(data.getStringExtra("nama"));
+            edNim.setText(data.getStringExtra("nim"));
+            edNimLama.setText(data.getStringExtra("nim"));
+            edAlamat.setText(data.getStringExtra("alamat"));
+            edEmail.setText(data.getStringExtra("email"));
+        }
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pd.setTitle("Mohon Menunggu");
+                pd.show();
 
-                    GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
-                    Call<DefaultResult> del= service.delete_mhs(
-                            edNimLama.getText().toString(),
-                            "72180203"
-
-                    );
-
-                    del.enqueue(new Callback<DefaultResult>() {
-                        @Override
-                        public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
-                            Toast.makeText(MahasiswaUpdateActivity.this,"BERHASIL DIUBAH",Toast.LENGTH_LONG).show();
-
-                        }
-
-                        @Override
-                        public void onFailure(Call<DefaultResult> call, Throwable t) {
-                            pd.dismiss();
-                            Toast.makeText(MahasiswaUpdateActivity.this,"Error",Toast.LENGTH_LONG).show();
-                        }
-                    });
-
-                    Call<DefaultResult> add= service.add_mhs(
-                            edNama.getText().toString(),
-                            edNim.getText().toString(),
-                            edAlamat.getText().toString(),
-                            edEmail.getText().toString(),
-                            "kosongkan saja",
-                            "72180203"
-                    );
-                    add.enqueue(new Callback<DefaultResult>() {
-                        @Override
-                        public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
-                            pd.dismiss();
-                            Toast.makeText(MahasiswaUpdateActivity.this,"BERHASIL DIUBAH",Toast.LENGTH_LONG).show();
-
-                        }
-
-                        @Override
-                        public void onFailure(Call<DefaultResult> call, Throwable t) {
-                            pd.dismiss();
-                            Toast.makeText(MahasiswaUpdateActivity.this,"Error",Toast.LENGTH_LONG).show();
-                        }
-                    });
-                }
-            });
+                GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
+                Call<DefaultResult> call = service.update_mhs(
+                        edNama.getText().toString(),
+                        edNim.getText().toString(),
+                        edNimLama.getText().toString(),
+                        edAlamat.getText().toString(),
+                        edEmail.getText().toString(),
+                        "Kosongkan saja",
+                        "72180203"
+                );
+                call.enqueue(new Callback<DefaultResult>() {
+                    @Override
+                    public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
+                        pd.dismiss();
+                        Toast.makeText(MahasiswaUpdateActivity.this, "DATA BERHASIL DIUBAH", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(MahasiswaUpdateActivity.this, MainMhsActivity.class);
+                        startActivity(intent);
+                    }
+                    @Override
+                    public void onFailure(Call<DefaultResult> call, Throwable t) {
+                        pd.dismiss();
+                        Toast.makeText(MahasiswaUpdateActivity.this, "DATA TIDAK BERHASIL DIUBAH", Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        });
     }
 }

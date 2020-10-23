@@ -66,7 +66,7 @@ public class MahasiswaAddActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<DefaultResult> call, Throwable t) {
                         pd.dismiss();
-                        Toast.makeText(MahasiswaAddActivity.this,"GAGAL",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MahasiswaAddActivity.this,"DATA TIDAK DAPAT DISIMPAN",Toast.LENGTH_LONG).show();
                     }
                 });
             }

@@ -52,7 +52,7 @@ public class HapusMhsActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<DefaultResult> call, Throwable t) {
                         pd.dismiss();
-                        Toast.makeText(HapusMhsActivity.this,"GAGAL",Toast.LENGTH_LONG).show();
+                        Toast.makeText(HapusMhsActivity.this,"DATA TIDAK BERHASIL DIHAPUS",Toast.LENGTH_LONG).show();
                     }
                 });
             }

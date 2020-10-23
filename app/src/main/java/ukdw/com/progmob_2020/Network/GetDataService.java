@@ -40,6 +40,7 @@ public interface GetDataService {
     Call<DefaultResult>update_mhs(
             @Field("nama") String nama,
             @Field("nim") String nim,
+            @Field("nim_cari") String nim_cari,
             @Field("alamat") String alamat,
             @Field("email") String email,
             @Field("foto") String foto,
