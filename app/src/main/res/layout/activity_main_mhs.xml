@@ -10,7 +10,6 @@
         android:id="@+id/buttonGetMhs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:text="Lihat Mahasiswa"
         app:layout_constraintBottom_toTopOf="@+id/buttonAddMhs"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,10 +20,28 @@
         android:id="@+id/buttonAddMhs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:text="Tambah Mahasiswa"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDelMhs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDelMhs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hapus Mahasiswa"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUpdateMhs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonUpdateMhs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ubah Mahasiswa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

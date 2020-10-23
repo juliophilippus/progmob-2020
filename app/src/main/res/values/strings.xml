@@ -5,4 +5,10 @@
     <string name="nim">NIM</string>
     <string name="alamat">Alamat</string>
     <string name="email">Email</string>
+    <string name="delMhs">NIM yang akan di hapus</string>
+    <string name="nimLama">NIM yang dicari</string>
+    <string name="namaBaru">Nama Baru</string>
+    <string name="nimBaru">NIM Baru</string>
+    <string name="alamatBaru">Alamat Baru</string>
+    <string name="emailBaru">Email Baru</string>
 </resources>

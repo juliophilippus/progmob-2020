@@ -19,6 +19,8 @@ public class MainMhsActivity extends AppCompatActivity {
         //variabel
         Button btnLihatMhs = (Button)findViewById(R.id.buttonGetMhs);
         Button btnTambahMhs = (Button)findViewById(R.id.buttonAddMhs);
+        Button btnDelMhs = (Button)findViewById(R.id.buttonDelMhs);
+        Button btnUpdateMhs = (Button)findViewById(R.id.buttonUpdateMhs);
 
         //action
         btnLihatMhs.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +35,22 @@ public class MainMhsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainMhsActivity.this, MahasiswaAddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDelMhs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMhsActivity.this, HapusMhsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnUpdateMhs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMhsActivity.this, MahasiswaUpdateActivity.class);
                 startActivity(intent);
             }
         });
