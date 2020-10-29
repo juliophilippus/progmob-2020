@@ -11,4 +11,23 @@
     <string name="nimBaru">NIM Baru</string>
     <string name="alamatBaru">Alamat Baru</string>
     <string name="emailBaru">Email Baru</string>
+    <string name="nidn">NIDN</string>
+    <string name="gelar">Gelar</string>
+    <string name="delDsn">NIDN yang akan di hapus</string>
+    <string name="nidnLama">NIDN yang dicari</string>
+    <string name="nidnBaru">NIDN Baru</string>
+    <string name="gelarBaru">Gelar Baru</string>
+    <string name="namaMatkul">Nama Matakuliah</string>
+    <string name="sesi">Sesi</string>
+    <string name="hari">Hari</string>
+    <string name="sks">SKS</string>
+    <string name="kodeMatkul">Kode Matakuliah</string>
+    <string name="kodeLama">Kode Matakuliah yang dicari</string>
+    <string name="namaMatkulBaru">Nama Matakuliah Baru</string>
+    <string name="kodeMatkulBaru">Kode Matakuliah Baru</string>
+    <string name="sesiBaru">Sesi Baru</string>
+    <string name="sksBaru">SKS Baru</string>
+    <string name="hariBaru">Hari Baru</string>
+    <string name="masukkanNim">Username</string>
+    <string name="masukkanPassword">Password</string>
 </resources>

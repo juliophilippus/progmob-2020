@@ -12,17 +12,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CRUD.HapusMhsActivity"></activity>
-        <activity android:name=".CRUD.MahasiswaUpdateActivity" />
-        <activity android:name=".CRUD.MahasiswaAddActivity" />
-        <activity android:name=".CRUD.MahasiswaGetAllActivity" />
-        <activity android:name=".CRUD.MainMhsActivity"
-            android:label="Menu CRUD Mahasiswa">
+        <activity android:name=".Pertemuan6.LoginActivity"></activity>
+        <activity android:name=".CRUD_Matkul.MatkulUpdateActivity" />
+        <activity android:name=".CRUD_Matkul.HapusMatkulActivity" />
+        <activity android:name=".CRUD_Matkul.MatkulAddActivity" />
+        <activity android:name=".CRUD_Matkul.MatkulGetAllActivity" />
+        <activity android:name=".CRUD_Matkul.MainMatkulActivity" />
+        <activity android:name=".CRUD_Dosen.DosenUpdateActivity" />
+        <activity android:name=".CRUD_Dosen.DosenGetAllActivity" />
+        <activity android:name=".CRUD_Dosen.DosenAddActivity" />
+        <activity android:name=".CRUD_Dosen.HapusDsnActivity" />
+        <activity android:name=".CRUD_Dosen.MainDsnActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".Pertemuan6.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Pertemuan6.PrefActivity" />
+        <activity android:name=".CRUD.HapusMhsActivity" />
+        <activity android:name=".CRUD.MahasiswaUpdateActivity" />
+        <activity android:name=".CRUD.MahasiswaAddActivity" />
+        <activity android:name=".CRUD.MahasiswaGetAllActivity" />
+        <activity
+            android:name=".CRUD.MainMhsActivity"
+            android:label="Menu CRUD Mahasiswa" />
         <activity android:name=".Pertemuan2.CardViewTestActivity" />
         <activity android:name=".Pertemuan2.RecyclerActivity" />
         <activity android:name=".Pertemuan2.ListActivity" />

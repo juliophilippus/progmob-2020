@@ -1,4 +1,4 @@
-package ukdw.com.progmob_2020.CRUD;
+package ukdw.com.progmob_2020.CRUD_Dosen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,34 +13,38 @@ import android.widget.Toast;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import ukdw.com.progmob_2020.CRUD.MahasiswaUpdateActivity;
+import ukdw.com.progmob_2020.CRUD.MainMhsActivity;
 import ukdw.com.progmob_2020.Model.DefaultResult;
 import ukdw.com.progmob_2020.Network.GetDataService;
 import ukdw.com.progmob_2020.Network.RetrofitClientInstance;
 import ukdw.com.progmob_2020.R;
 
-public class MahasiswaUpdateActivity extends AppCompatActivity {
+public class DosenUpdateActivity extends AppCompatActivity {
     ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mahasiswa_update);
+        setContentView(R.layout.activity_dosen_update);
 
-            final EditText edNimLama = (EditText)findViewById(R.id.edNimLama);
-            final EditText edNama = (EditText)findViewById(R.id.edUpNama);
-            final EditText edNim = (EditText)findViewById(R.id.edUpNim);
-            final EditText edAlamat = (EditText)findViewById(R.id.edUpAlamat);
-            final EditText edEmail = (EditText)findViewById(R.id.edUpEmail);
-            Button btnEdit = (Button) findViewById(R.id.btnUpdate);
-            pd = new ProgressDialog(MahasiswaUpdateActivity.this);
+        final EditText edNidnLama = (EditText)findViewById(R.id.edNidnLama);
+        final EditText edNama = (EditText)findViewById(R.id.edUpNamaDosen);
+        final EditText edNidn = (EditText)findViewById(R.id.edUpNidn);
+        final EditText edAlamat = (EditText)findViewById(R.id.edUpAlamatDosen);
+        final EditText edEmail = (EditText)findViewById(R.id.edUpEmailDosen);
+        final EditText edGelar = (EditText)findViewById(R.id.edUpGelar);
+        Button btnEdit = (Button) findViewById(R.id.btnUpdateDsn);
+        pd = new ProgressDialog(DosenUpdateActivity.this);
 
         Intent data = getIntent();
         if(data.getExtras() != null){
             edNama.setText(data.getStringExtra("nama"));
-            edNim.setText(data.getStringExtra("nim"));
-            edNimLama.setText(data.getStringExtra("nim"));
+            edNidn.setText(data.getStringExtra("nidn"));
             edAlamat.setText(data.getStringExtra("alamat"));
             edEmail.setText(data.getStringExtra("email"));
+            edGelar.setText(data.getStringExtra("gelar"));
+            edNidnLama.setText(data.getStringExtra("nidn"));
         }
 
         btnEdit.setOnClickListener(new View.OnClickListener() {
@@ -50,27 +54,28 @@ public class MahasiswaUpdateActivity extends AppCompatActivity {
                 pd.show();
 
                 GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
-                Call<DefaultResult> call = service.update_mhs(
+                Call<DefaultResult> call = service.update_dsn(
                         edNama.getText().toString(),
-                        edNim.getText().toString(),
-                        edNimLama.getText().toString(),
+                        edNidn.getText().toString(),
                         edAlamat.getText().toString(),
                         edEmail.getText().toString(),
-                        "Kosongkan saja",
-                        "72180203"
+                        edGelar.getText().toString(),
+                        "kosongkan saja",
+                        "72180203",
+                        edNidnLama.getText().toString()
                 );
                 call.enqueue(new Callback<DefaultResult>() {
                     @Override
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
                         pd.dismiss();
-                        Toast.makeText(MahasiswaUpdateActivity.this, "DATA BERHASIL DIUBAH", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(MahasiswaUpdateActivity.this, MainMhsActivity.class);
+                        Toast.makeText(DosenUpdateActivity.this, "DATA BERHASIL DIUBAH", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(DosenUpdateActivity.this, MainDsnActivity.class);
                         startActivity(intent);
                     }
                     @Override
                     public void onFailure(Call<DefaultResult> call, Throwable t) {
                         pd.dismiss();
-                        Toast.makeText(MahasiswaUpdateActivity.this, "DATA TIDAK BERHASIL DIUBAH", Toast.LENGTH_LONG).show();
+                        Toast.makeText(DosenUpdateActivity.this, "DATA TIDAK BERHASIL DIUBAH", Toast.LENGTH_LONG).show();
                     }
                 });
             }
