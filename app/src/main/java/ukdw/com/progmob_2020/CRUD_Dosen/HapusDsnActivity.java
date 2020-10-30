@@ -3,6 +3,7 @@ package ukdw.com.progmob_2020.CRUD_Dosen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import ukdw.com.progmob_2020.CRUD.HapusMhsActivity;
+import ukdw.com.progmob_2020.CRUD_Matkul.HapusMatkulActivity;
 import ukdw.com.progmob_2020.Model.DefaultResult;
 import ukdw.com.progmob_2020.Network.GetDataService;
 import ukdw.com.progmob_2020.Network.RetrofitClientInstance;
@@ -47,6 +49,8 @@ public class HapusDsnActivity extends AppCompatActivity {
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
                         pd.dismiss();
                         Toast.makeText(HapusDsnActivity.this,"DATA BERHASIL DIHAPUS",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(HapusDsnActivity.this, MainDsnActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override

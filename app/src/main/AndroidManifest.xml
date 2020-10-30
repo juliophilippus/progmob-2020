@@ -7,23 +7,34 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/julio"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/julio"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Pertemuan6.LoginActivity"></activity>
-        <activity android:name=".CRUD_Matkul.MatkulUpdateActivity" />
-        <activity android:name=".CRUD_Matkul.HapusMatkulActivity" />
-        <activity android:name=".CRUD_Matkul.MatkulAddActivity" />
-        <activity android:name=".CRUD_Matkul.MatkulGetAllActivity" />
-        <activity android:name=".CRUD_Matkul.MainMatkulActivity" />
-        <activity android:name=".CRUD_Dosen.DosenUpdateActivity" />
-        <activity android:name=".CRUD_Dosen.DosenGetAllActivity" />
-        <activity android:name=".CRUD_Dosen.DosenAddActivity" />
-        <activity android:name=".CRUD_Dosen.HapusDsnActivity" />
-        <activity android:name=".CRUD_Dosen.MainDsnActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".CRUD_Matkul.MatkulUpdateActivity"
+            android:label="Update Matakuliah"/>
+        <activity android:name=".CRUD_Matkul.HapusMatkulActivity"
+            android:label="Hapus Matakuliah"/>
+        <activity android:name=".CRUD_Matkul.MatkulAddActivity"
+            android:label="Tambah Matakuliah"/>
+        <activity android:name=".CRUD_Matkul.MatkulGetAllActivity"
+            android:label="Lihat Matakuliah"/>
+        <activity android:name=".CRUD_Matkul.MainMatkulActivity"
+            android:label="Menu CRUD Matakuliah"/>
+        <activity android:name=".CRUD_Dosen.DosenUpdateActivity"
+            android:label="Update Dosen"/>
+        <activity android:name=".CRUD_Dosen.DosenGetAllActivity"
+            android:label="Lihat Dosen"/>
+        <activity android:name=".CRUD_Dosen.DosenAddActivity"
+            android:label="Tambah Dosen"/>
+        <activity android:name=".CRUD_Dosen.HapusDsnActivity"
+            android:label="Hapus Dosen"/>
+        <activity android:name=".CRUD_Dosen.MainDsnActivity"
+            android:label="Menu CRUD Dosen"/>
+        <activity android:name=".HomeActivity"
+            android:label="Sistem Akademik UKDW"/>
         <activity android:name=".Pertemuan6.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,10 +43,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".Pertemuan6.PrefActivity" />
-        <activity android:name=".CRUD.HapusMhsActivity" />
-        <activity android:name=".CRUD.MahasiswaUpdateActivity" />
-        <activity android:name=".CRUD.MahasiswaAddActivity" />
-        <activity android:name=".CRUD.MahasiswaGetAllActivity" />
+        <activity android:name=".CRUD.HapusMhsActivity"
+            android:label="Hapus Mahasiswa"/>
+        <activity android:name=".CRUD.MahasiswaUpdateActivity"
+            android:label="Update Mahasiswa"/>
+        <activity android:name=".CRUD.MahasiswaAddActivity"
+            android:label="Tambah Mahasiswa"/>
+        <activity android:name=".CRUD.MahasiswaGetAllActivity"
+            android:label="Lihat Mahasiswa"/>
         <activity
             android:name=".CRUD.MainMhsActivity"
             android:label="Menu CRUD Mahasiswa" />

@@ -33,7 +33,6 @@ public class MatkulCRUDRecyclerAdapter extends RecyclerView.Adapter<MatkulCRUDRe
         this.matakuliahList = matakuliahList;
     }
 
-
     public List<Matakuliah> getMatakuliahList() {
         return matakuliahList;
     }
@@ -69,8 +68,8 @@ public class MatkulCRUDRecyclerAdapter extends RecyclerView.Adapter<MatkulCRUDRe
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView txtNama,txtKodeMk,txtHariMk,txtSesiMk,txtSksMk;
-        private RecyclerView rvMatakuliah;
+        private TextView txtNama, txtKodeMk,txtHariMk ,txtSesiMk ,txtSksMk;
+        private RecyclerView rvGetAll;
         Matakuliah mk;
 
         public ViewHolder(@NonNull View itemView) {
@@ -80,7 +79,7 @@ public class MatkulCRUDRecyclerAdapter extends RecyclerView.Adapter<MatkulCRUDRe
             txtHariMk = itemView.findViewById(R.id.txtHari);
             txtSesiMk = itemView.findViewById(R.id.txtSesi);
             txtSksMk = itemView.findViewById(R.id.txtSks);
-//            rvMatakuliah = itemView.findViewById(R.id.rvMatakuliah);
+            rvGetAll = itemView.findViewById(R.id.rvGetMatkulAll);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {

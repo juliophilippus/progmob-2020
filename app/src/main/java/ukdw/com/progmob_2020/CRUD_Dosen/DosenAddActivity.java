@@ -3,6 +3,7 @@ package ukdw.com.progmob_2020.CRUD_Dosen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -58,6 +59,8 @@ public class DosenAddActivity extends AppCompatActivity {
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
                         pd.dismiss();
                         Toast.makeText(DosenAddActivity.this,"DATA BERHASIL DISIMPAN",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(DosenAddActivity.this, MainDsnActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override

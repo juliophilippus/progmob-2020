@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Toast.makeText(LoginActivity.this, "Anda sudah login", Toast.LENGTH_SHORT).show();
+        Toast.makeText(LoginActivity.this, "Silahkan login...", Toast.LENGTH_SHORT).show();
 
         session = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
 

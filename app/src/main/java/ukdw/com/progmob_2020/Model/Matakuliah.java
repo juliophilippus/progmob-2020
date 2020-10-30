@@ -51,20 +51,20 @@ public class Matakuliah {
         this.nim_progmob = nim_progmob;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getNama() {
         return nama;
     }
 
     public void setNama(String nama) {
         this.nama = nama;
+    }
+
+    public String getNim_progmob() {
+        return nim_progmob;
+    }
+
+    public void setNim_progmob(String nim_progmob) {
+        this.nim_progmob = nim_progmob;
     }
 
     public String getKode() {
@@ -97,13 +97,5 @@ public class Matakuliah {
 
     public void setSks(String sks) {
         this.sks = sks;
-    }
-
-    public String getNim_progmob() {
-        return nim_progmob;
-    }
-
-    public void setNim_progmob(String nim_progmob) {
-        this.nim_progmob = nim_progmob;
     }
 }

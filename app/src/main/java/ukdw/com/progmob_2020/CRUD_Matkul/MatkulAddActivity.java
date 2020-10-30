@@ -3,6 +3,7 @@ package ukdw.com.progmob_2020.CRUD_Matkul;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,6 @@ import android.widget.Toast;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import ukdw.com.progmob_2020.CRUD_Dosen.DosenAddActivity;
 import ukdw.com.progmob_2020.Model.DefaultResult;
 import ukdw.com.progmob_2020.Network.GetDataService;
 import ukdw.com.progmob_2020.Network.RetrofitClientInstance;
@@ -31,10 +31,10 @@ public class MatkulAddActivity extends AppCompatActivity {
         EditText edHari = (EditText)findViewById(R.id.editTextHari);
         EditText edSesi = (EditText)findViewById(R.id.editTextSesi);
         EditText edSks = (EditText)findViewById(R.id.editTextSks);
-        Button btnSimpanMk = (Button)findViewById(R.id.buttonSimpanMatkul);
+        Button btnSimpan = (Button)findViewById(R.id.buttonSimpanMatkul);
         pd = new ProgressDialog(MatkulAddActivity.this);
 
-        btnSimpanMk.setOnClickListener(new View.OnClickListener() {
+        btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pd.setTitle("Mohon Menunggu");
@@ -42,7 +42,7 @@ public class MatkulAddActivity extends AppCompatActivity {
 
                 GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
                 Call<DefaultResult> call = service.add_mtkl(
-                       edNama.getText().toString(),
+                        edNama.getText().toString(),
                         edKode.getText().toString(),
                         edHari.getText().toString(),
                         edSesi.getText().toString(),
@@ -54,6 +54,8 @@ public class MatkulAddActivity extends AppCompatActivity {
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
                         pd.dismiss();
                         Toast.makeText(MatkulAddActivity.this, "DATA BERHASIL DISIMPAN", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(MatkulAddActivity.this, MainMatkulActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override

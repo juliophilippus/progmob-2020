@@ -2,6 +2,7 @@ package ukdw.com.progmob_2020.Pertemuan6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,7 +10,7 @@ import ukdw.com.progmob_2020.CRUD.MainMhsActivity;
 import ukdw.com.progmob_2020.HomeActivity;
 import ukdw.com.progmob_2020.R;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

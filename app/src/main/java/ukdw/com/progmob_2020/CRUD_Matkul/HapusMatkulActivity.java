@@ -3,6 +3,7 @@ package ukdw.com.progmob_2020.CRUD_Matkul;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +48,8 @@ public class HapusMatkulActivity extends AppCompatActivity {
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
                         pd.dismiss();
                         Toast.makeText(HapusMatkulActivity.this,"DATA BERHASIL DIHAPUS",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(HapusMatkulActivity.this, MainMatkulActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override

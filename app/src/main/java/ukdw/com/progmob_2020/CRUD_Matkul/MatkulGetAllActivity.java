@@ -25,8 +25,8 @@ import ukdw.com.progmob_2020.R;
 
 public class MatkulGetAllActivity extends AppCompatActivity {
 
-    RecyclerView rvMtkl;
-    MatkulCRUDRecyclerAdapter mtklAdapter;
+    RecyclerView rvMatkul;
+    MatkulCRUDRecyclerAdapter matkulAdapter;
     ProgressDialog pd;
     List<Matakuliah> matakuliahList;
 
@@ -35,7 +35,7 @@ public class MatkulGetAllActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matkul_get_all);
 
-        rvMtkl = (RecyclerView)findViewById(R.id.rvGetMatkulAll);
+        rvMatkul = (RecyclerView)findViewById(R.id.rvGetMatkulAll);
         pd = new ProgressDialog(this);
         pd.setTitle("Mohon Bersabar");
         pd.show();
@@ -48,11 +48,11 @@ public class MatkulGetAllActivity extends AppCompatActivity {
             public void onResponse(Call<List<Matakuliah>> call, Response<List<Matakuliah>> response) {
                 pd.dismiss();
                 matakuliahList = response.body();
-                mtklAdapter = new MatkulCRUDRecyclerAdapter(matakuliahList);
+                matkulAdapter = new MatkulCRUDRecyclerAdapter(matakuliahList);
 
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MatkulGetAllActivity.this);
-                rvMtkl.setLayoutManager(layoutManager);
-                rvMtkl.setAdapter(mtklAdapter);
+                rvMatkul.setLayoutManager(layoutManager);
+                rvMatkul.setAdapter(matkulAdapter);
 
             }
 
